@@ -508,12 +508,11 @@ class MachineApp {
       
       desoupedText = llmSoupToText(rawContent);
       if (llmResponseData.reasoning) {
-        desoupedThoughts = llmSoupToText(llmResponseData.reasoning)  // No reasoning content
+        desoupedThoughts = llmSoupToText(llmResponseData.reasoning)  // Reasoning content
         console.log('Thoughts text:', desoupedThoughts);
       }
       
       console.log('Regular text:', desoupedText);
-      console.log('Thoughts text:', desoupedThoughts);
       
       const newCmjMessage = {
         role: llmResponseData.role,
